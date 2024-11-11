@@ -6,7 +6,7 @@ const SliderComponent = ({ DefaultValue, max, min, amount, label, unit, step, va
         <Stack my={1.4}>
             <Stack gap={1}>
                 <Typography variant='subtitle2'>{label}</Typography>
-                <Typography varient='h5'>{amount} {unit}</Typography>
+                <Typography variant='h5'>{amount} {unit}</Typography>
             </Stack>
 
             <div>

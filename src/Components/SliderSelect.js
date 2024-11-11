@@ -21,7 +21,7 @@ const SliderSelect = ({ data, setData }) => {
             ...data,
             homeValue: value,
             downPayment: value * 0.2,
-            laonAmount: value * 0.8,
+            loanAmount: value * 0.8,
           })
         }
       />
@@ -40,16 +40,16 @@ const SliderSelect = ({ data, setData }) => {
             //spread operator
             ...data,
             downPayment: value,
-            laonAmount: data.homeValue - value,
+            loanAmount: data.homeValue - value,
           })
         }
       />
 
       <SliderComponent
-        amount={data.laonAmount}
+        amount={data.loanAmount}
         unit="$"
-        DefaultValue={data.laonAmount}
-        value={data.laonAmount}
+        DefaultValue={data.loanAmount}
+        value={data.loanAmount}
         min={1000}
         max={data.homeValue}
         label="Loan Amount"
@@ -58,7 +58,7 @@ const SliderSelect = ({ data, setData }) => {
           setData({
             //spread operator
             ...data,
-            laonAmount: value,
+            loanAmount: value,
             downPayment: data.homeValue - value,
           })
         }

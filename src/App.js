@@ -12,7 +12,7 @@ function App() {
   const[data, setData]=useState({
     homeValue: 3000,
     downPayment: 3000 * 0.2,
-    laonAmount: 3000 * 0.8,
+    loanAmount: 3000 * 0.8,
     loanTerm: 5,
     interestRate: 5
   })
@@ -27,11 +27,11 @@ function App() {
       <Grid container spacing={5}>
       <Grid item md={6}>
         <SliderSelect data={data} setData={setData}/>
-        <Tenure/>
+        <Tenure data={data} setData={setData}/>
       </Grid>
 
       <Grid item md={6}>
-        <Result/>
+        <Result data={data}/>
         <button onClick={()=>setCount(count-1)}>Decrement</button>
         {count}
         <button onClick={()=>setCount(count+1)}>Increment</button>
