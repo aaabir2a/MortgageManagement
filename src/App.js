@@ -24,13 +24,13 @@ function App() {
       <Container maxWidth = "xl">
 
       <Navbar/>
-      <Grid container spacing={5}>
-      <Grid item md={6}>
+      <Grid container spacing={5} alignItems={'center'}>
+      <Grid item xs={12} md={6}>
         <SliderSelect data={data} setData={setData}/>
         <Tenure data={data} setData={setData}/>
       </Grid>
 
-      <Grid item md={6}>
+      <Grid item xs={12} md={6}>
         <Result data={data}/>
         <button onClick={()=>setCount(count-1)}>Decrement</button>
         {count}
